@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 580px;
+            /* background-image: linear-gradient(45deg, #536ee5 0%, #00b493 100%);  */
+            background-color: #577373;
+            color: #ffffff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #weather{
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            /* background-color: #74EBD5; */
+/* background-image: linear-gradient(90deg, #1fedc7 0%, #637be7 100%); */
+
+border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            transition: all;
+            transition-timing-function: ease-in-out;
+            transition-duration: 3s;
+        }
+        button{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 50px;
+        }
+        input{
+            margin-left: 80px;
+            width: 280px;
+            height: 40px;
+            border:none;
+            border-radius: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 17px;
+            text-align: center;
+   }
+   #ip{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+   }
+
+  
+   .dg{
+    font-size: 50px;
+   }
+   .city{
+    font-size: 25px;
+   }
+
+   #hum{
+    font-size: 25px;
+    margin-left: 10px;
+   }
+   #wind{
+    font-size: 25px;
+    margin-left: 10px;
+   }
+   .d1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .what{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: aliceblue;
+   }
+   #degree{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+   }
+   .wind{
+    font-size: 25px;
+   }
+   #imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+   }
+   #desc{
+    font-size: 20px;
+    margin-top: -10px;
+   }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="weather">
+         <div id="ip">
+            <input id="search" type="text" placeholder="Enter The City Name">
+            <button id="btn">
+                <img width="20px" height="20px" src="search.png" alt="">
+            </button>
+         </div>
+
+         <!-- multiple_imgs -->
+         <div id="imgs">
+             <img id="img" width="180px" height="180px" src="clouds.png" alt="">
+             <p id="desc"></p>
+         </div>
+
+         <div id="degree">
+            <p class="dg"></p>
+            <p class="city"></p>
+         </div>
+
+         <div class="what">
+            <div>
+            <div class="d1">
+                <img width="32px" height="25px"src="humidity.png" alt="">
+                <p id="hum">~</p>
+            </div>
+            <p id="hum">Humidity</p>
+        </div>
+
+        <div>
+            <div>
+            <div class="d1">
+                <img  width="32px" height="25px" src="wind.png" alt="">
+                <p id="wind">~</p>
+            </div>
+            <p class="wind">Wind Speed</p>
+        </div>
+
+ </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
